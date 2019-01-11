@@ -124,7 +124,7 @@ Unclean
 
 Tips
 
-	StringUtils.abbreviate(formattedMessage, 2000);
+	StringUtils.abbreviate(text1, 2000);
 
 ### org.apache.commons.lang3.StringUtils.substringBefore, substringAfter ###
 
