@@ -152,7 +152,7 @@ Tips
 
 Unclean
 
-	var someText = 'javascript rules';
+	const someText = 'javascript rules';
 	if (someText.indexOf('javascript') !== -1) {
 	}
 		
@@ -162,7 +162,7 @@ Unclean
 
 Tips
 
-	var someText = 'text';
+	const someText = 'text';
 
 	!!~someText.indexOf('tex'); // someText contains "tex" - true
 	!~someText.indexOf('tex'); // someText NOT contains "tex" - false
@@ -177,19 +177,19 @@ Tips
 
 Problem
 
-	var one = 1;
-	var two = 2;
-	var three = '3';
+	const one = 1;
+	const two = 2;
+	const three = '3';
 	
-	var result = one + two + three; //"33" instead of "123"
+	const result = one + two + three; //"33" instead of "123"
 
 Tips
 
-	var one = 1;
-	var two = 2;
-	var three = '3';
+	const one = 1;
+	const two = 2;
+	const three = '3';
 	
-	var result = ''.concat(one, two, three); //"123"
+	const result = ''.concat(one, two, three); //"123"
 
 > http://www.jstips.co/en/javascript/safe-string-concatenation/
 
@@ -199,7 +199,7 @@ Tips
 
 Unclean
 
-	var data1 = '2018-12-31 23:59:59'; // Goal: 20181231235959
+	let data1 = '2018-12-31 23:59:59'; // Goal: 20181231235959
 	data1 = removeAll(data1, '-');
 	data1 = replaceAll(data1, ':', '');
 	data1 = removeAll(data1, '  ');
@@ -207,7 +207,7 @@ Unclean
 
 Or Unclean
 
-	var data1 = removeAll(replaceAll(removeAll('2018-12-31 23:59:59', '-'), ':', ''), ' ');
+	let data1 = removeAll(replaceAll(removeAll('2018-12-31 23:59:59', '-'), ':', ''), ' ');
 	console.info(data1); // 20181231235959
 
 Tips
@@ -224,7 +224,7 @@ Tips
 	  };
 	}
 	
-	var data1 = new Date1('John');
+	let data1 = new Date1('John');
 	data1.removeAll('-').replaceAll(':', '').removeAll(' ');
 
 > http://www.jstips.co/en/javascript/return-objects-to-enable-chaining-of-functions/
@@ -237,7 +237,7 @@ Problem
 
 list = [] assigns a reference to a new array to a variable, while any other references are unaffected. which means that references to the contents of the previous array are still kept in memory, leading to memory leaks.
 
-		var list = [1, 2, 3, 4];
+		let list = [1, 2, 3, 4];
 		function empty() {
 		    //empty your array
 		    list = [];
@@ -248,7 +248,7 @@ Tips
 
 list.length = 0 deletes everything in the array, which does hit other references.
 
-		var list = [1, 2, 3, 4];
+		let list = [1, 2, 3, 4];
 		function empty() {
 		    //empty your array
 		    list.length = 0;
@@ -257,10 +257,10 @@ list.length = 0 deletes everything in the array, which does hit other references
 
 Example
 
-		var foo = [1,2,3];
-		var bar = [1,2,3];
-		var foo2 = foo;
-		var bar2 = bar;
+		let foo = [1,2,3];
+		let bar = [1,2,3];
+		let foo2 = foo;
+		let bar2 = bar;
 		foo = [];
 		bar.length = 0;
 		console.log(foo, bar, foo2, bar2);
@@ -275,11 +275,11 @@ Example
 
 Tips
 
-	var one = '1';
+	let one = '1';
 	
-	var numberOne = +one; // Number 1
+	let numberOne = +one; // Number 1
 
-	var negativeNumberOne = -one; // Number -1
+	let negativeNumberOne = -one; // Number -1
 
 > http://www.jstips.co/en/javascript/converting-to-number-fast-way/
 
@@ -307,7 +307,7 @@ Tips
 		condition && dosomething();
 	}
 
-	var a;
+	let a;
 
 	console.log(a); //undefined
 	
@@ -346,14 +346,14 @@ Tips
 
 Unclean
 
-	var variable2 = '';
+	let variable2 = '';
 	if (variable1 !== null || variable1 !== undefined || variable1 !== '') {
 	     variable2 = variable1;
 	}
 
 Tips
 
-	var variable2 = variable1  || '';
+	let variable2 = variable1  || '';
 
 *P.S.: If variable1 is a number, then first check if it is 0.*
 
@@ -414,7 +414,7 @@ Tips
 
 Unclean
 
-	var example1 = 'Hello. Hi. Bye.';
+	let example1 = 'Hello. Hi. Bye.';
 	if( example1.indexOf('Hell') === 0 ){ // startsWith
 
 	}
@@ -429,7 +429,7 @@ Tips
 
 > Use lodash.js (~24kB)
 
-	var example1 = 'Hello. Hi. Bye.';
+	let example1 = 'Hello. Hi. Bye.';
 	if( _.startsWith(example1, 'Hell') ){ // startsWith
 
 	}
