@@ -524,7 +524,7 @@ Tips
 
 ----------
 
-### deprecated: $(document).ready, $(window).load in jQuery ###
+### deprecated: $(document).ready, $(window).load using jQuery3 ###
 
 Problem
 
