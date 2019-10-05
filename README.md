@@ -529,7 +529,7 @@ Tips
 Problem
 
         $(document).ready(() => {});
-	$(window).load(() => {});
+        $(window).load(() => {});
 	
 Tips
 
