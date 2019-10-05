@@ -521,6 +521,21 @@ Tips
 
 > **const, let are supported since IE 11**
 
+
+----------
+
+### deprecated: $(document).ready, $(window).load in jQuery ###
+
+Problem
+
+        $(document).ready(() => {});
+	$(window).load(() => {});
+	
+Tips
+
+        jQuery(($) => {});
+	
+
 ## [JSP] ##
 
 ### form reset ###
