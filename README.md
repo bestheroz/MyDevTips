@@ -173,6 +173,22 @@ Tips
 
 ----------
 
+### Array add, remove -> push(), pop(), shift(), unsift() ###
+
+Tips
+
+> unshift -> array <- push
+	
+> shift   <- array -> pop
+	
+	let list = [];
+	list.unshift('add front');
+	list.push('add rear');
+	list.shift();
+	list.pop();
+
+----------
+
 ### Safe string concatenation ###
 
 Problem
